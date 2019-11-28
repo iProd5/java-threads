@@ -9,7 +9,7 @@ public class Foreground {
       System.out.println("Second thread dying");
       
     });
-    
+//    t.setDaemon(false);
     t.start();
     
     System.out.println("Main thread dying");
