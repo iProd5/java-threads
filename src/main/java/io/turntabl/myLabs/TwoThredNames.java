@@ -1,7 +1,7 @@
 package io.turntabl.myLabs;
 
 public class TwoThredNames {
-    public static void main(String args[]) {
+    public static void main(String args[]) throws InterruptedException {
         Thread thread1 = new Thread(() -> {
             try{
                 Thread.sleep(10000);
@@ -19,7 +19,8 @@ public class TwoThredNames {
         thread2.start();
 
         System.out.println("Main thread wait for the two threads for 10secs");
-
+thread1.join();
+thread2.join();
 
    /*     Thread t1 = new Thread(() ->
                 System.out.println("i am thread one"));
